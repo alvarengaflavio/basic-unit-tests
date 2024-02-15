@@ -32,3 +32,5 @@ it("deve somar todos os valores numéricos de um array", () => {
   const result6 = add(numbers6);
   expect(result6).toStrictEqual(expected6);
 });
+
+// pasta 3 - video 8
