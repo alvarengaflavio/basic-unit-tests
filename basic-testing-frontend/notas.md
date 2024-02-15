@@ -43,3 +43,5 @@ it("deve somar todos os valores de um array", () => {
 ```
 
 Desta forma o teste fica muito mais fácil de ler, manipular, entender e ser alterado futuramente.
+
+## Mantenha sey teste simples!
