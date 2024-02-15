@@ -31,12 +31,12 @@ it("deve somar todos os valores de um array", () => {
 });
 ```
 
-Mas ele também pode ser melhorado, veja que nele eu também o valor esperado de forma bruta, dentro da de `.toBe(10)`. Posso definir o valor esperado dentro de uma variável separada na fase de `Arrange` pelos mesmos motivos que foi feito com o `array` de números.
+Mas ele também pode ser melhorado, veja que nele eu também o valor esperado de forma bruta, dentro da de `.toBe(10)`. Devo calcular o valor esperado dentro de uma variável separada na fase de `Arrange` pelos mesmos motivos que foi feito com o `array` de números.
 
 ```js
 it("deve somar todos os valores de um array", () => {
   const números = [1, 2, 3, 4];
-  const esperado = 10;
+  const esperado = números.reduce((acc, curr) => acc + curr, 0); // Linha nova
   const resultado = add(números);
   expect(resultado).toBe(esperado);
 });
